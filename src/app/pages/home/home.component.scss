@@ -1,8 +1,23 @@
-.game-field {
-  display: grid;
-  margin: 0;
-  width: 98vw;
-  height: 98vh;
-  background-color: #222;
-  padding: 10px;
+.game-area {
+  position: relative;
+  width: 100%; /* oder eine feste Breite, je nach Bedarf */
+  height: 500px; /* oder eine feste Höhe, je nach Bedarf */
+  border: 1px solid #ccc; /* Optional, um das Spielfeld sichtbar zu machen */
+}
+
+// .character {
+  // width: 48px; /* Breite eines Frames */
+  // height: 64px; /* Höhe eines Frames */
+  // background-image: url('/assets/your-sprite-sheet.png');
+  // background-repeat: no-repeat;
+// }
+
+.character {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  image-rendering: pixelated;
+  background-image: url("../../../assets/nackter-mann-sprite.png");
+  background-repeat: no-repeat;
+  transform: scale(4);
 }
