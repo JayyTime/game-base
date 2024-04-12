@@ -1,8 +1,9 @@
-.game-area {
+.game-field {
   position: relative;
-  width: 100%; /* oder eine feste Breite, je nach Bedarf */
-  height: 500px; /* oder eine feste Höhe, je nach Bedarf */
-  border: 1px solid #ccc; /* Optional, um das Spielfeld sichtbar zu machen */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../../../assets/Background-400.png");
 }
 
 // .character {
