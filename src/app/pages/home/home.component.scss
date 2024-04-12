@@ -6,10 +6,10 @@
 }
 
 // .character {
-  // width: 48px; /* Breite eines Frames */
-  // height: 64px; /* Höhe eines Frames */
-  // background-image: url('/assets/your-sprite-sheet.png');
-  // background-repeat: no-repeat;
+// width: 48px; /* Breite eines Frames */
+// height: 64px; /* Höhe eines Frames */
+// background-image: url('/assets/your-sprite-sheet.png');
+// background-repeat: no-repeat;
 // }
 
 .character {
@@ -20,4 +20,16 @@
   background-image: url("../../../assets/nackter-mann-sprite.png");
   background-repeat: no-repeat;
   transform: scale(4);
+}
+
+.keyboard {
+  // height: auto;
+  // width: auto;
+  position: absolute;
+  image-rendering: pixelated;
+  background-image: url("../../../assets/WSAD.png");
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // margin: 20px;
 }

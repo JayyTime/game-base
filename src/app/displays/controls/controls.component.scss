@@ -1,0 +1,53 @@
+// .keyboard-controls {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 20px;
+//   background-image: url("../../../assets/WSAD.png");
+//   background-repeat: no-repeat;
+//   transform: scale(4);
+// }
+
+.wasd-overlay {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.key {
+  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../../../assets/WSAD.png");
+  background-size: 200%; /* Da zwei Spalten vorhanden sind */
+  display: inline-block;
+  cursor: pointer;
+}
+
+button {
+  // visibility: hidden;
+  background-color:transparent;
+  border:none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 0;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+#w-key {
+  grid-area: w-key;
+}
+#s-key {
+  grid-area: s-key;
+}
+#a-key {
+  grid-area: a-key;
+}
+#d-key {
+  grid-area: d-key;
+}

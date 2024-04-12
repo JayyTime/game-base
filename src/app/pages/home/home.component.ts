@@ -1,11 +1,12 @@
 import { Component, HostListener } from '@angular/core';
+import { ControlsComponent } from '../../displays/controls/controls.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [],
+  imports: [ControlsComponent],
 })
 export class HomeComponent {
   position = { x: window.innerWidth / 2, y: window.innerHeight / 2 }; // Position des Charakters
@@ -26,6 +27,36 @@ export class HomeComponent {
     character.style.top = `${this.position.y}px`;
     this.loop();
   }
+
+  moveCharacterByButtonClick(direction: string) {
+    const speed = 5;
+    // Logik hier, um den Charakter in die gewünschte Richtung zu bewegen
+    switch (direction) {
+      case 'w':
+        this.position.y -= speed;
+        this.direction = 3;
+        this.animate();
+        break;
+      case 's':
+        this.position.y += speed;
+        this.direction = 0;
+        this.animate();
+        break;
+      case 'a':
+        this.position.x -= speed;
+        this.direction = 1;
+        this.animate();
+        break;
+      case 'd':
+        this.position.x += speed;
+        this.direction = 2;
+        this.animate();
+        break;
+    }
+
+    console.log(`Move character ${direction}`);
+  }
+
   updatePosition() {
     const character = document.querySelector('.character') as HTMLElement;
     const now = Date.now();

@@ -1,0 +1,28 @@
+<div class="wasd-overlay">
+  <button
+    (click)="buttonClicked('w')"
+    style="margin-left: 50px;"
+    class="key"
+    id="w-key"
+    [ngStyle]="{ 'background-position': getPosition('w') }"
+  ></button>
+  <br/>
+  <button
+    (click)="buttonClicked('a')"
+    class="key"
+    id="a-key"
+    [ngStyle]="{ 'background-position': getPosition('a') }"
+  ></button>
+  <button
+    (click)="buttonClicked('s')"
+    class="key"
+    id="s-key"
+    [ngStyle]="{ 'background-position': getPosition('s') }"
+  ></button>
+  <button
+    (click)="buttonClicked('d')"
+    class="key"
+    id="d-key"
+    [ngStyle]="{ 'background-position': getPosition('d') }"
+  ></button>
+</div>
