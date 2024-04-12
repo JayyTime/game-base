@@ -20,7 +20,7 @@
     [ngStyle]="{ 'background-position': getPosition('s') }"
   ></button>
   <button
-    (click)="buttonClicked('d')"
+    (click)="buttonClicked('d'); getPosition('d')"
     class="key"
     id="d-key"
     [ngStyle]="{ 'background-position': getPosition('d') }"

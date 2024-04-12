@@ -19,12 +19,12 @@ export class ControlsComponent {
     d: false,
   };
 
-  // @Output() moveCharacter: EventEmitter<KeyType> = new EventEmitter();
-  // the output above but as signal
   moveCharacter = output<KeyType>();
-  
+
   buttonClicked(direction: KeyType) {
+    this.handleKeyDown({ key: direction } as KeyboardEvent);
     this.moveCharacter.emit(direction);
+    setTimeout(() => this.handleKeyUp({ key: direction } as KeyboardEvent), 100);
   }
 
   @HostListener('window:keydown', ['$event'])
