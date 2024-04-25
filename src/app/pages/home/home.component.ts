@@ -9,6 +9,9 @@ import { ControlsComponent } from '../../displays/controls/controls.component';
   imports: [ControlsComponent],
 })
 export class HomeComponent {
+  handleKeyDown(event: KeyboardEvent) {
+    throw new Error('Method not implemented.');
+  }
   position = { x: window.innerWidth / 2, y: window.innerHeight / 2 }; // Position des Charakters
   frameIndex = 0; // Aktueller Frame der Animation
   totalFrames = 3; // Gesamtzahl der Frames in der Gehanimation
@@ -20,6 +23,7 @@ export class HomeComponent {
   // Zustände für das Tastendrücken
   lastKeyPressTime: number = 0;
   keyPressDelay: number = 50; // Verzögerung in Millisekunden
+  keysStatus: any;
 
   ngOnInit(): void {
     const character = document.querySelector('.character') as HTMLElement;

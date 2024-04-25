@@ -58,8 +58,4 @@ export class ControlsComponent {
     };
     return positions[key];
   }
-  // loop = () => {
-  //   requestAnimationFrame(this.loop);
-  //   // Hier könnte Logik für kontinuierliche Animationen oder Bewegungen hinzugefügt werden
-  // };
 }
