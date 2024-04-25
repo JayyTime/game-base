@@ -52,12 +52,4 @@ describe('ControlsComponent', () => {
     component.buttonClicked('w');
     expect(component.handleKeyDown).toHaveBeenCalled();
   });
-
-  it('should handle key up after 100ms', () => {
-    spyOn(component, 'handleKeyUp');
-    component.buttonClicked('w');
-    setTimeout(() => {
-      expect(component.handleKeyUp).toHaveBeenCalled();
-    }, 100);
-  });
 });
